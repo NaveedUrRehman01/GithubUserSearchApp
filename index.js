@@ -1,5 +1,21 @@
 
+function Buttontoggle()
+{
+  
+  var x = document.getElementsByTagName("META")[3].content;
+  
 
+  if(x === "light"){
+   document.getElementsByTagName('META')[3].content = "dark"
+   document.getElementById('logo').style.color = "white"
+  }
+  else if(x === "dark"){
+    document.getElementsByTagName('META')[3].content = "light"
+    document.getElementById('logo').style.color = "black"
+   
+  }
+  
+}
 
 const check = document.getElementById('btnsrch');
 check.addEventListener('submit',function(){
@@ -57,6 +73,5 @@ function displayData(e) {
               }
             
         })
-       
-      
+        search = document.getElementById('searchBar').value = " ";
 }
